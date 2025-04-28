@@ -61,6 +61,7 @@
       max-width: 500px;
       text-align: center;
       color: #ffffff;
+      margin-top: 80px;
     }
     .container h2 {
       color: #ffffff;
@@ -118,10 +119,9 @@
         </div>
     </div>
           
-    
     <div class="container">
     <h2>Customer Login</h2>
-    <form>
+    <form id="customerLoginForm">
         <div class="form-group">
         <label for="username">Username</label>
         <input type="text" id="username" name="username" required>
@@ -135,6 +135,31 @@
         <button type="submit" class="btn-submit">Login</button>
     </form>
     </div>
+
+<script>
+  // Sample customer credentials
+  const customerCredentials = {
+    'customer': 'customer123',
+    'jane_smith': 'hello456',
+    'customer01': 'cust789'
+  };
+
+  document.getElementById('customerLoginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // prevent page reload
+
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    if (username === '' || password === '') {
+      alert('Please fill in both username and password.');
+    } else if (customerCredentials[username] && customerCredentials[username] === password) {
+      alert('Login successful!');
+      window.location.href = 'cust_portal.html'; // Redirect after successful login
+    } else {
+      alert('Invalid username or password. Please try again.');
+    }
+  });
+</script>
 
 </body>
 </html>

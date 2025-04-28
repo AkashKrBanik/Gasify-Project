@@ -121,7 +121,7 @@
 <div class="navbar">
     <img src="images/gasify_logo.png" alt="Gasify Logo">
     <div class="nav-buttons">
-        <a href="#">DASHBOARD</a>
+        <a href="cust_portal.html">DASHBOARD</a>
         <a href="#">LOGOUT</a>
     </div>
 </div>
@@ -159,9 +159,22 @@
         <option value="evening">Evening</option>
       </select>
     </div>
-    <button type="submit" class="btn-submit">Book Now</button>
+    <button class="btn-submit" onclick="location.href='book_ack.html'">Book Now</button>
   </form>
 </div>
+
+<script>
+  const quantitySelect = document.getElementById('quantity');
+  const priceInput = document.getElementById('price');
+
+  quantitySelect.addEventListener('change', function() {
+    const pricePerCylinder = 900;
+    const quantity = parseInt(this.value);
+    const totalPrice = pricePerCylinder * quantity;
+    priceInput.value = "Rs. " + totalPrice;
+  });
+</script>
+
 
 </body>
 </html>

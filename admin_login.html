@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Login</title>
   <style>
+    /* Your original CSS */
     * {
       margin: 0;
       padding: 0;
@@ -110,16 +111,16 @@
 </head>
 <body>
 
-    <div class="navbar">
-        <img src="images/gasify_logo.png" alt="Gasify Logo">
-        <div class="nav-buttons">
-            <a href="#">HOME</a>
-        </div>
-    </div>
+  <div class="navbar">
+      <img src="images/gasify_logo.png" alt="Gasify Logo">
+      <div class="nav-buttons">
+          <a href="#">HOME</a>
+      </div>
+  </div>
 
 <div class="container">
   <h2>Admin Login</h2>
-  <form>
+  <form id="loginForm">
     <div class="form-group">
       <label for="adminUsername">Username</label>
       <input type="text" id="adminUsername" name="adminUsername" required>
@@ -132,6 +133,32 @@
     <button type="submit" class="btn-submit">Login</button>
   </form>
 </div>
+
+<script>
+  // Sample credentials stored in an object
+  const credentials = {
+    'admin': 'admin123',
+    'superuser': 'super456',
+    'manager': 'manage789'
+  };
+
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Stop form from submitting normally
+
+    var username = document.getElementById('adminUsername').value.trim();
+    var password = document.getElementById('adminPassword').value.trim();
+
+    if (username === '' || password === '') {
+      alert('Please fill in both username and password.');
+    } else if (credentials[username] && credentials[username] === password) {
+      // Correct username and password
+      alert('Login successful!');
+      window.location.href = 'admin_portal.html'; // Redirect
+    } else {
+      alert('Invalid username or password. Please try again.');
+    }
+  });
+</script>
 
 </body>
 </html>
