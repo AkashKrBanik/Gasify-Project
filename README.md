@@ -1,5 +1,5 @@
 # Gasify-Project
-Gas Booking Management System Front-end
+User Interface for a Gas Booking Management System
 
 ## 📸 Screenshots
 <img src="https://github.com/AkashKrBanik/Gasify-Project/blob/main/Screenshots/1.png" alt="Login Form" width="1000">
