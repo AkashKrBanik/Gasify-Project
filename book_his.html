@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Booking History</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #f7b138;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .navbar {
+      width: 100%;
+      background-color: #000000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+    .navbar img {
+      height: 60px;
+    }
+    .navbar .nav-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .navbar a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      background-color: #f7b138;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    .navbar a:hover {
+      background-color: #ffcf6e;
+    }
+    .history-container {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 40px;
+      width: 90%;
+      max-width: 700px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      text-align: center;
+    }
+    .history-container h2 {
+      color: #f7b138;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+    .booking-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    .booking-table th, .booking-table td {
+      padding: 12px;
+      border: 1px solid #ffffff;
+      text-align: center;
+    }
+    .booking-table th {
+      background-color: #f7b138;
+      color: #000000;
+    }
+    .booking-table td {
+      background-color: #333333;
+      color: #ffffff;
+    }
+    .no-bookings {
+      color: #f7b138;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <img src="images/gasify_logo.png" alt="Gasify Logo">
+    <div class="nav-buttons">
+      <a href="#">DASHBOARD</a>
+      <a href="#">LOGOUT</a>
+    </div>
+  </div>
+
+  <div class="history-container">
+    <h2>Your Booking History</h2>
+    <table class="booking-table">
+      <thead>
+        <tr>
+          <th>Booking ID</th>
+          <th>Date</th>
+          <th>Quantity</th>
+          <th>Vendor</th>
+          <th>Price</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1001</td>
+          <td>2024-11-08</td>
+          <td>50 L</td>
+          <td>Gas Co.</td>
+          <td>$100</td>
+          <td>Confirmed</td>
+        </tr>
+        <tr>
+          <td>1002</td>
+          <td>2024-10-25</td>
+          <td>20 L</td>
+          <td>QuickGas</td>
+          <td>$40</td>
+          <td>Delivered</td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>
+
+</body>
+</html>

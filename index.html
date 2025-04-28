@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gas Booking System</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #f7b138;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .main-container {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      height: 80%;
+    }
+    .logo-container, .content-container {
+      background-color: #000000;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    .logo-container img {
+      height: 100px;
+    }
+    .content-container {
+      width: 60%;
+      justify-content: space-between;
+    }
+    .row {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      width: 100%;
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .header p {
+      font-size: 1.2em;
+      color: #ffffff;
+      padding: 0 100px;
+    }
+    .login-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px 0;
+    }
+    .login-buttons a {
+      background-color: #f7b138;
+      color: #000000;
+      font-weight: bold;
+      padding: 12px 20px;
+      text-align: center;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .login-buttons a:hover {
+      background-color: #ffcf6e;
+    }
+    .signup-section {
+      padding: 20px;
+      border-top: none;
+    }
+    .signup-section h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    .signup-section a {
+      background-color: #f7b138;
+      color: #000000;
+      font-weight: bold;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .signup-section a:hover {
+      background-color: #ffcf6e;
+    }
+  </style>
+</head>
+<body>
+
+<div class="main-container">
+  <div class="logo-container">
+    <img src="images/gasify_logo.png" alt="Gasify Logo">
+  </div>
+  <div class="content-container">
+    <div class="row header">
+      <h1>WELCOME TO GASIFY</h1><br>
+      <p style="padding: 0 100px; color: #f7b138;">Our Gas Booking system provides an easy and reliable way to book gas cylinders. We ensure timely delivery and excellent customer service, making the gas booking process hassle-free and efficient.</p>
+    </div>
+    <div class="row login-buttons">
+      <a href="#">Login as Administrator</a>
+      <a href="#">Login as Customer</a>
+    </div>
+    <div class="row signup-section">
+      <h2>NEW CUSTOMER? SIGN UP</h2><br>
+      <a href="#">Sign Up</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

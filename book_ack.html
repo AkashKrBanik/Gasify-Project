@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Acknowledgement</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #f7b138;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #ffffff;
+    }
+    .navbar {
+      width: 100%;
+      background-color: #000000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+    .navbar img {
+      height: 60px;
+    }
+    .navbar .nav-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .navbar a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      background-color: #f7b138;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    .navbar a:hover {
+      background-color: #ffcf6e;
+    }
+    .container {
+      background-color: #000000;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      padding: 40px;
+      width: 100%;
+      max-width: 700px;
+      text-align: center;
+      color: #ffffff;
+    }
+    .container h2 {
+      color: #ffffff;
+      font-size: 1.8em;
+      margin-bottom: 1em;
+    }
+    .form-group {
+      margin-bottom: 1.2em;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      color: #ffffff;
+    }
+    .form-row {
+      display: flex;
+      justify-content: space-between;
+    }
+    .form-row .form-group {
+      width: 48%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <img src="images/gasify_logo.png" alt="Gasify Logo">
+    <div class="nav-buttons">
+      <a href="#">DASHBOARD</a>
+      <a href="#">LOGOUT</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Booking Acknowledgement</h2>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="customerId">Customer ID:</label>
+        <span id="customerId">12345</span>
+      </div>
+      <div class="form-group">
+        <label for="bookingId">Booking ID:</label>
+        <span id="bookingId">67890</span>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <span id="quantity">2</span>
+      </div>
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <span id="price">Rs. 900</span>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="deliveryDate">Preferred Delivery Date:</label>
+        <span id="deliveryDate">2024-11-15</span>
+      </div>
+      <div class="form-group">
+        <label for="timeSlot">Preferred Time Slot:</label>
+        <span id="timeSlot">Morning</span>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="bookingStatus">Booking Status:</label>
+        <span id="bookingStatus">Confirmed</span>
+      </div>
+      <div class="form-group">
+        <label for="deliveryStatus">Delivery Status:</label>
+        <span id="deliveryStatus">Pending</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
